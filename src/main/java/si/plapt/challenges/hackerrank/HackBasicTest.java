@@ -177,6 +177,36 @@ public class HackBasicTest extends TestCase {
 	}
 	
 	
-	
+	@Test
+	public void testNegativeSubArrays() {
+		//Scanner scanner = new Scanner(System.in);
+		//Integer n = scanner.nextInt();	
+		//int[] arr = new int[n];
+		//for (int i=0; i< n;i++) {
+		//	arr[i] = scanner.nextInt();
+		//}
+		int n = 5;
+		int[] arr = {1,-2,4,-5,1};
+		int count =0;
+		for (int k=1; k <= n; k++) {	
+			//System.out.println("===== " + k +" =====");
+			for (int i=0;i<n;i++) {
+				int sum = 0;			
+				if (i+ k - 1 < n) {
+					for (int j=i; j< i + k; j++) {
+						sum+=arr[j];
+					}
+					//System.out.println(sum);
+					if (sum <0) {
+						count++;
+					}
+				}
+				
+			}
+		}
+		
+		System.out.println(count);
+		
+	}
 	
 }
