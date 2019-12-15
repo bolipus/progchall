@@ -2,21 +2,14 @@ package si.plapt.challenges.hackerrank;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Deque;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -586,5 +579,34 @@ public class HackBasicTest extends TestCase {
 	            }
 	        }
 		}
+		
+		interface PerformOperation {
+			 boolean check(int a);
+			}
+		
+		static class MyMath{
+			public static boolean checker(PerformOperation p, int num) {
+				  return p.check(num);
+				 }
+
+			
+		       public static PerformOperation isOdd(){
+		           return (num) -> num % 2 ==1;
+		       }
+
+		        public static PerformOperation isPrime(){
+		           return (int num) -> BigInteger.valueOf(num).isProbablePrime(1);
+		       }
+
+		        public static PerformOperation isPolidrome(){
+		           return (num) -> Integer.toString(num).equals(new StringBuilder(Integer.toString(num)).reverse().toString());
+		       }
+
+
+		   }
+		
+		
+		
+		
 	
 }
