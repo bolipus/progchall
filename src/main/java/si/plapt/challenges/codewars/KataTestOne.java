@@ -1,19 +1,14 @@
 package si.plapt.challenges.codewars;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Queue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import junit.framework.TestCase;
 
-public class KataTestOne extends TestCase {
+public class KataTestOne {
 
 	
 	@Test
@@ -158,7 +153,7 @@ public class KataTestOne extends TestCase {
 		List<Integer> binary = Arrays.asList(1,1,1,1);
 		int num = convertBinaryArrayToInt(binary);
 		System.out.println(num);
-		assertEquals(15, num);
+		assertEquals(15,  num);
 	}
         
 	

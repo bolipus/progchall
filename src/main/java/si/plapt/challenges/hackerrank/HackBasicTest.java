@@ -19,14 +19,13 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import junit.framework.TestCase;
 
-public class HackBasicTest extends TestCase {
+public class HackBasicTest {
 	
 
-	@Test
+	@org.junit.jupiter.api.Test
 	public void testUsername() {
 		
 		String userName = "Julia007";
@@ -82,7 +81,6 @@ public class HackBasicTest extends TestCase {
 			}
 		}
 		
-		Scanner scanner = new Scanner(System.in);
 		
 	}
 
@@ -311,6 +309,8 @@ public class HackBasicTest extends TestCase {
 			
 			System.out.println(b1.cardinality()+" "+b2.cardinality());
 		}
+
+		scanner.close();
 		
 	}
 	
@@ -362,6 +362,8 @@ public class HackBasicTest extends TestCase {
 			}
 			
 		}
+
+		scanner.close();
 		
 	}
 	
@@ -417,6 +419,8 @@ public class HackBasicTest extends TestCase {
 				System.out.println(false);
 			}
 		}
+
+		scanner.close();
 		
 		
 	}
@@ -462,7 +466,9 @@ public class HackBasicTest extends TestCase {
         	i++;
         }
               
-        System.out.println(max);
+				System.out.println(max);
+				
+				in.close();
 	}
 	
 	class Student {
@@ -557,13 +563,13 @@ public class HackBasicTest extends TestCase {
 					"SERVED";
 			InputStream is = new ByteArrayInputStream(input.getBytes());
 			
-			Scanner scan = new Scanner(is);
+			Scanner scanner = new Scanner(is);
 			
-			int totalEvents = Integer.parseInt(scan.nextLine());    
+			int totalEvents = Integer.parseInt(scanner.nextLine());    
 	        List<String> events = new ArrayList<>();
 	        
 	        while (totalEvents-- != 0) {
-	            String event = scan.nextLine();
+	            String event = scanner.nextLine();
 	            events.add(event);
 	        }
 	        
@@ -577,7 +583,9 @@ public class HackBasicTest extends TestCase {
 	            for (Student st: students) {
 	                System.out.println(st.getName());
 	            }
-	        }
+					}
+					
+					scanner.close();
 		}
 		
 		interface PerformOperation {

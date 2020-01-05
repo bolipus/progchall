@@ -13,11 +13,11 @@ import java.util.Set;
 
 import javax.xml.bind.DatatypeConverter;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import junit.framework.TestCase;
 
-public class HackBasicTest2 extends TestCase {
+
+public class HackBasicTest2 {
 	
 	@Test
 	public void testMD5() throws NoSuchAlgorithmException {

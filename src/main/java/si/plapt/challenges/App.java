@@ -1,8 +1,5 @@
 package si.plapt.challenges;
 
-import java.util.Arrays;
-
-
 /**
  * Hello world!
  *
